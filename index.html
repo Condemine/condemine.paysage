@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condemine Paysage - Créateurs d'horizons </title>
+    <title>CONDEMINE PAYSAGE - Créateurs d'horizons</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@300;400;600&display=swap');
+        
         body {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Raleway', sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
-            background: #2C2F36; /* Anthracite */
+            background: #1E1E1E; /* Gris anthracite foncé */
             color: #F5F5DC; /* Beige clair */
         }
         header {
-            background: url('header-bg.jpg') no-repeat center center/cover;
+            background: rgba(0, 0, 0, 0.7) url('header-bg.jpg') no-repeat center center/cover;
+            background-blend-mode: darken;
             color: white;
-            padding: 60px;
+            padding: 80px 20px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         nav {
-            background: #4F7942; /* Vert nature */
+            background: #2E4A21; /* Vert foncé élégant */
             padding: 15px;
         }
         nav a {
@@ -27,58 +36,69 @@
             text-decoration: none;
             margin: 0 20px;
             font-size: 18px;
+            font-weight: 600;
+            position: relative;
         }
-        nav a:hover {
-            color: #F5F5DC; /* Beige clair sur hover */
+        nav a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #D4AF37; /* Doré subtil */
+            transition: width 0.3s;
+            margin: auto;
+        }
+        nav a:hover::after {
+            width: 100%;
         }
         section {
-            padding: 50px;
-            background: #333; /* Gris foncé pour les sections */
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 60px 10%;
+            background: #2C2F36; /* Gris anthracite */
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
         }
         h2 {
             font-family: 'Playfair Display', serif;
-            color: #A1C6B4; /* Vert pâle */
-        }
-        .image-section {
-            text-align: center;
+            color: #A1C6B4; /* Vert pâle élégant */
+            font-size: 2em;
         }
         .image-section img {
-            width: 80%;
-            max-width: 800px;
+            width: 100%;
+            max-width: 700px;
             border-radius: 10px;
             margin: 20px 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
         footer {
-            background: #70543E; /* Marron terre */
+            background: #222; /* Gris très foncé */
             color: white;
-            padding: 15px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 20px;
+            text-align: center;
         }
         .btn {
             display: inline-block;
             padding: 12px 25px;
             background: #A1C6B4; /* Vert pâle */
-            color: white;
+            color: #1E1E1E;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 20px;
             font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.3s;
         }
         .btn:hover {
-            background: #F5F5DC; /* Beige clair */
-            color: #333; /* Gris foncé */
+            background: #D4AF37; /* Doré */
+            color: white;
+            transform: translateY(-3px);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Jardins Élégance - Créateurs de Paysages</h1>
-        <p>Transformez vos espaces en un havre de paix </p>
+        <h1>CONDEMINE PAYSAGE - Créateurs d'horizons</h1>
+        <p>Transformez vos espaces en un havre de paix</p>
     </header>
     <nav>
         <a href="index.html">Accueil</a>
@@ -90,16 +110,15 @@
     </nav>
     <section>
         <h2>À Propos de Nous</h2>
-        <p> Fondée sur la base de la force du lien familial et de la passion de ramener la nature dans nos jardins, notre entreprise conçoit des extérieurs qui vont changer votre horizon. 
-          De votre fenêtre, vous ne verrez plus les choses pareil.</p>
+        <p>Fondée sur la base de la force du lien familial et de la passion de ramener la nature au cœur de nos jardins, 
+notre entreprise conçoit des extérieurs qui vont changer votre horizon.</p>
         <div class="image-section">
             <img src="about.jpg" alt="Notre équipe">
         </div>
     </section>
     <section>
         <h2>Nos Services</h2>
-        <p>De la conception à l’entretien, nous créons des jardins qui évoluent harmonieusement au fil des saisons.
-        Entretien courant de jardin incluant tonte, taille haie, plantation ..., élagage, abattage, terrassement, maçonnerie paysagère. </p>
+        <p>De la conception à l’entretien, nous créons des jardins qui évoluent harmonieusement au fil des saisons.</p>
         <div class="image-section">
             <img src="services.jpg" alt="Conception de jardin">
         </div>
@@ -115,7 +134,7 @@
         <h2>Pourquoi Nous Choisir</h2>
         <p>Expertise, écoute, approche écoresponsable, garantie satisfaction et prix transparents.</p>
         <div class="image-section">
-            <img src="whyus.jpg" alt="Pourquoi nous choisir ">
+            <img src="whyus.jpg" alt="Pourquoi nous choisir">
         </div>
     </section>
     <section>
